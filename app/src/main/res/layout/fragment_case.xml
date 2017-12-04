@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="6dp"
+            android:ems="10"
+            android:hint="Brief Description"
+            android:inputType="text|textMultiLine"
+            android:paddingLeft="20dp"
+            android:singleLine="false"
+            android:layout_below="@+id/date_last_seen"
+            android:layout_alignLeft="@+id/location_last_seen"
+            android:layout_alignStart="@+id/location_last_seen"
+            android:layout_alignRight="@+id/choose_location"
+            android:layout_alignEnd="@+id/choose_location" />
+
+        <EditText
+            android:id="@+id/location_last_seen"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Last seen location"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textAlignment="textStart"
+            android:textSize="17sp"
+            android:layout_below="@+id/description"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp" />
+
+
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:isScrollContainer="true"
+            android:scrollbars="vertical"
+            android:text="Gallery"
+            android:layout_below="@+id/camera"
+            android:layout_marginTop="12dp"
+            android:layout_alignRight="@+id/camera"
+            android:layout_alignEnd="@+id/camera"
+            android:layout_toEndOf="@+id/location_last_seen"
+            android:layout_alignLeft="@+id/camera"
+            android:layout_alignStart="@+id/camera" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="22dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_person"
+            android:layout_marginLeft="44dp"
+            android:layout_marginStart="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignStart="@+id/name" />
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="19dp"
+            android:layout_alignTop="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:layout_toEndOf="@+id/image" />
+
+        <Button
+            android:id="@+id/report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="Report"
+            android:layout_below="@+id/reporter_rel"
+            android:layout_alignRight="@+id/reporter_rel"
+            android:layout_alignEnd="@+id/reporter_rel"
+            android:layout_alignLeft="@+id/reporter_rel"
+            android:layout_alignStart="@+id/reporter_rel" />
+
+        <Button
+            android:id="@+id/choose_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="Choose location"
+            android:layout_marginRight="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_alignTop="@+id/location_last_seen"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/date_last_seen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/description"
+            android:layout_alignLeft="@+id/description"
+            android:layout_alignRight="@+id/description"
+            android:layout_alignStart="@+id/description"
+            android:layout_below="@+id/body_type"
+            android:hint="Last seen date"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/reporter_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/choose_location"
+            android:layout_alignLeft="@+id/location_last_seen"
+            android:layout_alignRight="@+id/choose_location"
+            android:layout_alignStart="@+id/location_last_seen"
+            android:layout_below="@+id/choose_location"
+            android:layout_marginTop="22dp"
+            android:hint="Relationship"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/body_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/date_last_seen"
+            android:layout_alignLeft="@+id/date_last_seen"
+            android:layout_alignRight="@+id/date_last_seen"
+            android:layout_alignStart="@+id/date_last_seen"
+            android:layout_below="@+id/weight"
+            android:hint="Body Type"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/name"
+            android:layout_alignRight="@+id/weight"
+            android:layout_alignEnd="@+id/weight"
+            android:layout_alignLeft="@+id/weight"
+            android:layout_alignStart="@+id/weight" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/age"
+            android:layout_alignLeft="@+id/age"
+            android:layout_alignRight="@+id/age"
+            android:layout_alignStart="@+id/age"
+            android:layout_below="@+id/image"
+            android:hint="Name"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/height"
+            android:hint="Weight"
+            android:inputType="text|number"
+            android:paddingLeft="20dp"
+            android:textSize="18sp"
+            android:layout_alignLeft="@+id/body_type"
+            android:layout_alignStart="@+id/body_type"
+            android:layout_alignRight="@+id/body_type"
+            android:layout_alignEnd="@+id/body_type" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/body_type"
+            android:layout_alignLeft="@+id/body_type"
+            android:layout_alignRight="@+id/body_type"
+            android:layout_alignStart="@+id/body_type"
+            android:layout_below="@+id/age"
+            android:hint="Height"
+            android:inputType="text|number"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+   </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    </RelativeLayout>

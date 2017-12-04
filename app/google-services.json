@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116491945389",
+    "project_id": "firebase-missingpersonsapp"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116491945389:android:bcf2a9014fe64f70",
+        "android_client_info": {
+          "package_name": "com.example.paul.missingpersons"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116491945389-1fvd5jvb3eu8jlia8ogjft8a2jo8apjl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA70_hGzsFCwcsHCgnlxf3jFCwdN7w52oQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
